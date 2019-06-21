@@ -18,7 +18,8 @@ The fully functional deployed version of this app may be found here.
 * [Link to my repository](https://github.com/amitsinghgh19/Eat-Da-Burger.git)
 
 - - -
-##App Functionality
+
+## App Functionality
 
 *A fun app that lets a user input the name of a burger they want to eat.
 

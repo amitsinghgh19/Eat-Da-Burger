@@ -8,6 +8,9 @@
 
 ## ABOUT THE APP
 A burger logging application with MySQL, Node, Express, Handlebars and an ORM. Node and MySQL are used to query and route data in the app, and Handlebars is used to generate HTML. 
+
+See screen-shot below:
+    ![Results](/public/assets/img/deployedApp.png)
 - - -
 
 ## Demo Link

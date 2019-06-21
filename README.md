@@ -11,7 +11,7 @@ A burger logging application with MySQL, Node, Express, Handlebars and an ORM. N
 - - -
 
 ## Demo Link
-The fully functional deploymed version of this app may be found here.
+The fully functional deployed version of this app may be found here.
 * [Link to the web site hosted on Heroku](https://evening-sierra-96535.herokuapp.com/)
 
 ## GitHub Link  

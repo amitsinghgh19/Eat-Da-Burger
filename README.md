@@ -7,53 +7,137 @@
 - - -
 
 ## ABOUT THE APP
-A burger logging application with MySQL, Node, Express, Handlebars and an ORM. Node and MySQL are used to query and route data in the app, and Handlebars is used to generate HTML. The fully functional deploymed version of this app may be found at: https://evening-sierra-96535.herokuapp.com/
+A burger logging application with MySQL, Node, Express, Handlebars and an ORM. Node and MySQL are used to query and route data in the app, and Handlebars is used to generate HTML. 
+- - -
+
+## Demo Link
+The fully functional deploymed version of this app may be found here.
+* [Link to the web site hosted on Heroku](https://evening-sierra-96535.herokuapp.com/)
+
+## GitHub Link  
+* [Link to my repository](https://github.com/amitsinghgh19/Eat-Da-Burger.git)
 
 - - -
-If you plan to test this app locally, please make sure you perform the following tasks:
+###App Functionality
 
-1. While in the root directory of the app, run 'npm install' to install all the required npm packages
-2. Run the schema.sql and seeds.sql files in the Database GUI of your choice.
-3. Make sure your settings in the connection.js file in the 'config' directory match your specific local database.
+*A fun app that lets a user input the name of a burger they want to eat.
+
+*Once submitted, the burger is displayed in text on the left side of the page where it's waiting to be devoured.
+
+*Each burger in the waiting area also has a Devour it! button. Once clicked, the burger will move to the right side of the page.
+
+*Every burger entered is stored in the database.
 
 - - -
-Notes on MVC design pattern for this full-stack application:
-------------------------------------------------------------
 
-Model setup
--------------
-Inside your burger directory, create a folder named models.
+## Below is a summary of how the app is structured and operates
 
-In models directory, you will find the burger.js file.
-Inside burger.js, orm.js is imported into burger.js
+- config
+    - connection.js
+        - establish database connection
+    - orm.js
+        - object for all of our SQL statement functions
+            - all selects all burgers from database
+            - create creates a new burger and inserts it into the database
+            - update updates a database change
+            - delete removes burger from database
 
-Also inside burger.js, the code calls the ORM functions using burger specific input for the ORM.
-Export at the end of the burger.js file.
+- controllers
+    - burger_controllers.js
+        - routing for our burger app
+            - get pulls all burgers from database and displays on screen
+            - post and create will post new burger on screen and in database      
+            - put and update will update database and move burger to devoured after button click
+            - delete will remove burger from screen and database
+
+    - db
+        - schema.sql
+        - seeds.sql
+      
+- models
+    - burger.js
+        - importing orm.js to create functions that will interact with database
+    
+    - public
+        - assets for images, css and simple js file
+        - app.get to pull survey page
+
+- views
+    - handlebars functionality
+
+- server.js
+    - configuration of server and application
+
+- - -
+## Installation
+To run the application locally, first clone this repository with the following command.
+
+#### App Setup
 
 
-Controller setup
-------------------
 
-In controllers directory, you will find the burgers_controller.js file.
-Inside the burgers_controller.js file, the following are imported:
-
-Express
-burger.js
-
-A router is created  for the app, and the router is exported  at the end of your file.
+1. Create a GitHub repo called `burger` and clone it to your computer.
+	git clone https://github.com/amitsinghgh19/Eat-Da-Burger.git
 
 
 
-View setup
------------
-Inside the 'views' directory:
-.
-Create the index.handlebars file inside views directory.
-
-Create the layouts directory inside views directory.
+2. Make a package.json file by running `npm init` from the command line.
 
 
-Create the main.handlebars file inside layouts directory.
-Setup the main.handlebars file so it's able to be used by Handlebars.
-Setup the index.handlebars to have the template that Handlebars can render onto.
-Create a button in index.handlebars that will submit the user input into the database.
+## Next, install the application dependencies.
+
+
+3. Install the Express npm package: `npm install express`.
+
+
+
+4. Create a server.js file.
+
+
+
+5. Install the Handlebars npm package: `npm install express-handlebars`.
+
+
+
+6. Install the body-parser npm package: `npm install body-parser`.
+
+
+
+7. Install MySQL npm package: `npm install mysql`.
+
+
+
+8. Require the following npm packages inside of the server.js file:
+   
+* express
+   * body-parser
+
+9. Make sure to create a MySql database using schema.sql.
+
+Finally, run the node server.js locally.
+
+Now, open the application at the URL: http://localhost:8080/.
+
+
+-----------------------
+##Technologies Used
+* HTML
+* CSS
+* JavaScript
+* Node.js
+* MySQL
+* JawsDB
+* ORM
+* Heroku
+
+##Frameworks and Packages
+* Express.js
+* jQuery
+* Handlebars
+* Body-Parser
+* Method-override
+
+
+#### Background Picture Reference
+- https://wallpapersite.com/
+- https://www.google.com/

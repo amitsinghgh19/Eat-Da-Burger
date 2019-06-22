@@ -41,7 +41,7 @@ function objToSql(ob) {
 
 
 var orm = {
-//Showing all the burgers in the database
+//Showing all the burgers in the database //cb-callback
   selectAll: function(tableInput, cb) {
     var queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function(err, result) {
